@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Carl — Workboard</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#0c0b0a;font-family:'Geist',system-ui,sans-serif;color:#EFEBE3}
+a{color:#F0A94B;text-decoration:none}a:hover{color:#F6C27A}
+button{font-family:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="width: 390px; height: 1000px; box-sizing: border-box; background: #131211; display: flex; flex-direction: column; font-family: 'Geist', system-ui, sans-serif; color: #EFEBE3; overflow: hidden">
+  <header style="display: flex; flex-direction: column; gap: 4px; padding: 26px 20px 0">
+    <h1 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 36px; line-height: 1">Workboard</h1>
+    <p style="margin: 0; font-size: 14px; color: #A8A296">Nothing leaves without your OK.</p>
+  </header>
+
+  <div role="tablist" aria-label="Workboard view" style="margin: 18px 16px 4px; padding: 4px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; background: #1C1A18; border-radius: 14px">
+    <button role="tab" aria-selected="true" style="height: 40px; border: 0; border-radius: 10px; background: #2C2A26; color: #EFEBE3; font-size: 13px; font-weight: 600">Needs you · 6</button>
+    <button role="tab" aria-selected="false" style="height: 40px; border: 0; border-radius: 10px; background: transparent; color: #A8A296; font-size: 13px; font-weight: 500">Approved</button>
+    <button role="tab" aria-selected="false" style="height: 40px; border: 0; border-radius: 10px; background: transparent; color: #A8A296; font-size: 13px; font-weight: 500">Done</button>
+  </div>
+
+  <main style="flex-grow: 1; display: flex; flex-direction: column; gap: 18px; padding: 14px 16px 16px">
+    <section aria-label="Tasks" style="display: flex; flex-direction: column; gap: 8px">
+      <h2 style="margin: 0 4px; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #B9CF9B"><span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 3px; background: #B9CF9B"></span>Tasks <span style="font-weight: 400; color: #A8A296">2</span></h2>
+      <div style="display: flex; align-items: center; gap: 12px; padding: 12px 8px 12px 16px; background: #1C1A18; border: 1px solid #2A2724; border-radius: 14px">
+        <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 3px">
+          <span style="font-size: 15px; font-weight: 500">Update Lumen call sheet</span>
+          <span style="font-size: 12px; color: #A8A296">Due Wed, Sep 30 · <a href="Memo.dc.html" style="color: #A8A296; text-decoration: underline">from 12:04</a></span>
+        </div>
+        <button aria-label="Approve task" style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 22px; border: 1px solid #F0A94B; background: transparent; color: #F0A94B; display: flex; align-items: center; justify-content: center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+        </button>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; padding: 12px 8px 12px 16px; background: #1C1A18; border: 1px solid #2A2724; border-radius: 14px">
+        <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 3px">
+          <span style="font-size: 15px; font-weight: 500">Finish Harbor Coffee deck</span>
+          <span style="font-size: 12px; color: #A8A296">Due Wed, Sep 30 · <a href="Memo.dc.html" style="color: #A8A296; text-decoration: underline">from 09:31</a></span>
+        </div>
+        <button aria-label="Approve task" style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 22px; border: 1px solid #F0A94B; background: transparent; color: #F0A94B; display: flex; align-items: center; justify-content: center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+        </button>
+      </div>
+    </section>
+
+    <section aria-label="Client drafts" style="display: flex; flex-direction: column; gap: 8px">
+      <h2 style="margin: 0 4px; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #9DBBEA"><span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 3px; background: #9DBBEA"></span>Drafts <span style="font-weight: 400; color: #A8A296">1</span></h2>
+      <div style="display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; background: #1C1A18; border: 1px solid #2A2724; border-radius: 14px">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px">
+          <span style="font-size: 15px; font-weight: 500">To Mei · Lumen Studio</span>
+          <span style="font-size: 12px; color: #A8A296">Email</span>
+        </div>
+        <p style="margin: 0; font-size: 13px; line-height: 1.5; color: #A8A296">Hi Mei — quick one: we’re now shooting Friday, Oct 2 at 10am…</p>
+        <a href="Memo.dc.html" style="align-self: flex-start; height: 40px; min-width: 44px; padding: 0 16px; border-radius: 20px; background: #F0A94B; color: #1A1307; font-size: 13px; font-weight: 600; display: flex; align-items: center">Review &amp; send</a>
+      </div>
+    </section>
+
+    <section aria-label="Invoices" style="display: flex; flex-direction: column; gap: 8px">
+      <h2 style="margin: 0 4px; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #F0C36A"><span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 3px; background: #F0C36A"></span>Invoices <span style="font-weight: 400; color: #A8A296">1</span></h2>
+      <div style="display: flex; align-items: center; gap: 12px; padding: 14px 12px 14px 16px; background: #1F1B15; border: 1px dashed rgba(240,169,75,0.5); border-radius: 14px">
+        <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 3px">
+          <span style="font-size: 15px; font-weight: 500">Phase two · “the Taipei one”</span>
+          <span style="font-size: 12px; color: #F0A94B">Blocked: which client?</span>
+        </div>
+        <a href="Memo.dc.html" style="height: 40px; padding: 0 14px; border-radius: 20px; border: 1px solid #F0A94B; color: #F0A94B; font-size: 13px; font-weight: 500; display: flex; align-items: center">Answer</a>
+      </div>
+    </section>
+
+    <section aria-label="Expenses" style="display: flex; flex-direction: column; gap: 8px">
+      <h2 style="margin: 0 4px; display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #CDB3EA"><span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 3px; background: #CDB3EA"></span>Expenses <span style="font-weight: 400; color: #A8A296">2</span></h2>
+      <div style="display: flex; align-items: center; gap: 12px; padding: 12px 8px 12px 16px; background: #1C1A18; border: 1px solid #2A2724; border-radius: 14px">
+        <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 3px">
+          <span style="font-size: 15px; font-weight: 500">Parking</span>
+          <span style="font-size: 12px; color: #A8A296">Sep 24 · Transport</span>
+        </div>
+        <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 14px">NT$240</span>
+        <button aria-label="Approve expense" style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 22px; border: 1px solid #F0A94B; background: transparent; color: #F0A94B; display: flex; align-items: center; justify-content: center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+        </button>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; padding: 12px 8px 12px 16px; background: #1C1A18; border: 1px solid #2A2724; border-radius: 14px">
+        <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 3px">
+          <span style="font-size: 15px; font-weight: 500">Font license</span>
+          <span style="font-size: 12px; color: #A8A296">Sep 25 · Software</span>
+        </div>
+        <span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 14px">[AMOUNT]</span>
+        <button aria-label="Approve expense" style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 22px; border: 1px solid #F0A94B; background: transparent; color: #F0A94B; display: flex; align-items: center; justify-content: center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+        </button>
+      </div>
+    </section>
+
+    <button style="margin-top: 4px; height: 52px; border-radius: 26px; border: 0; background: #EFEBE3; color: #131211; font-size: 15px; font-weight: 600">Approve 4 tasks &amp; expenses</button>
+  </main>
+
+  <nav aria-label="Primary" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: end; padding: 8px 6px 26px; border-top: 1px solid #2A2724; background: #161513">
+    <a href="Main.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 48px; color: #A8A296; font-size: 11px; font-weight: 500">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6 8 6v8h-5v-5H9v5H4z"></path></svg>
+      <span>Today</span>
+    </a>
+    <a href="Inbox.dc.html" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 48px; color: #A8A296; font-size: 11px; font-weight: 500">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13l2.5-7h13L21 13"></path><path d="M3 13v6h18v-6h-5l-1.5 2.5h-5L8 13z"></path></svg>
+      <span>Memos</span>
+    </a>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; margin-top: -36px">
+      <a href="Recording.dc.html" aria-label="Talk to Carl — record a voice memo" style="width: 66px; height: 66px; border-radius: 33px; background: #F0A94B; color: #1A1307; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 6px #161513, 0 0 0 7px #2A2724, 0 8px 24px rgba(240,169,75,0.25)">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg>
+      </a>
+      <span style="font-size: 11px; font-weight: 600; color: #F0A94B">Talk</span>
+    </div>
+    <a href="Workboard.dc.html" aria-current="page" style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 48px; color: #F0A94B; font-size: 11px; font-weight: 500">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="7" height="16" rx="1.5"></rect><rect x="14" y="4" width="7" height="10" rx="1.5"></rect></svg>
+      <span>Workboard</span>
+      <span aria-label="6 waiting" style="position: absolute; top: 0; left: calc(50% + 4px); min-width: 18px; height: 18px; padding: 0 5px; box-sizing: border-box; border-radius: 9px; background: #F0A94B; color: #1A1307; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center">6</span>
+    </a>
+    <button style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 48px; border: 0; background: transparent; color: #A8A296; font-size: 11px; font-weight: 500">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v4M15 3v4"></path><path d="M7 7h10v4a5 5 0 0 1-10 0z"></path><path d="M12 16v5"></path></svg>
+      <span>Sources</span>
+    </button>
+  </nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

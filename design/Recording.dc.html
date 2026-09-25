@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Carl — Recording</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#0c0b0a;font-family:'Geist',system-ui,sans-serif;color:#EFEBE3}
+a{color:#F0A94B;text-decoration:none}a:hover{color:#F6C27A}
+button{font-family:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; box-sizing: border-box; background: #131211; display: flex; flex-direction: column; font-family: 'Geist', system-ui, sans-serif; color: #EFEBE3; overflow: hidden">
+  <header style="display: flex; align-items: center; justify-content: space-between; padding: 18px 12px 0">
+    <a href="Main.dc.html" aria-label="Discard memo" style="width: 44px; height: 44px; border-radius: 22px; color: #A8A296; display: flex; align-items: center; justify-content: center">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+    </a>
+    <div style="height: 30px; padding: 0 12px; border-radius: 15px; background: rgba(240,169,75,0.14); color: #F0A94B; font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 8px">
+      <span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 4px; background: #F0A94B"></span>
+      <span>Recording</span>
+    </div>
+    <div aria-hidden="true" style="width: 44px; height: 44px"></div>
+  </header>
+
+  <main style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; padding: 0 24px">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 6px">
+      <div style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 64px; font-weight: 400; letter-spacing: -0.02em; line-height: 1">0:37</div>
+      <p style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 20px; color: #A8A296">Ramble freely. I’ll tidy up.</p>
+    </div>
+
+    <div aria-hidden="true" style="height: 80px; display: flex; align-items: center; gap: 3px">
+      <sc-for list="{{bars}}" as="b" hint-placeholder-count="36">
+        <div style="width: 4px; border-radius: 2px; height: {{b.h}}px; background: {{b.c}}"></div>
+      </sc-for>
+    </div>
+
+    <section aria-label="Live transcript" style="align-self: stretch; display: flex; flex-direction: column; gap: 10px; padding: 18px; background: #1C1A18; border: 1px solid #2A2724; border-radius: 16px">
+      <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #8C867B">Okay — the Lumen shoot got moved to Friday, ten a.m. Need to tell Mei and update the call sheet.</p>
+      <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #8C867B">Um, parking yesterday was two-forty.</p>
+      <p style="margin: 0; font-size: 17px; line-height: 1.45; color: #EFEBE3">And invoice the Taipei one for phase two, they signed off last<span aria-hidden="true" style="display: inline-block; width: 2px; height: 18px; margin-left: 2px; vertical-align: -3px; background: #F0A94B"></span></p>
+    </section>
+  </main>
+
+  <div style="display: flex; justify-content: center; align-items: flex-start; gap: 36px; padding: 8px 24px 20px">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; width: 72px">
+      <button aria-label="Pause" style="width: 60px; height: 60px; border-radius: 30px; border: 1px solid #34312C; background: #211F1C; color: #EFEBE3; display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6v12M15 6v12"></path></svg>
+      </button>
+      <span style="font-size: 12px; color: #A8A296">Pause</span>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; width: 96px">
+      <a href="Inbox.dc.html" aria-label="Done, hand to Carl" style="width: 84px; height: 84px; border-radius: 42px; background: #F0A94B; color: #1A1307; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 10px rgba(240,169,75,0.12)">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+      </a>
+      <span style="font-size: 12px; font-weight: 500; color: #EFEBE3; margin-top: 6px">Hand to Carl</span>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; width: 72px">
+      <button aria-label="Attach a photo, like a receipt" style="width: 60px; height: 60px; border-radius: 30px; border: 1px solid #34312C; background: #211F1C; color: #EFEBE3; display: flex; align-items: center; justify-content: center">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>
+      </button>
+      <span style="font-size: 12px; color: #A8A296">Add receipt</span>
+    </div>
+  </div>
+
+  <p style="margin: 0; padding: 0 32px 36px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 12px; color: #A8A296; text-align: center">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>
+    <span>Lock your phone anytime. Sorting happens later.</span>
+  </p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var hs = [10,18,30,16,40,56,28,20,46,62,38,24,16,34,50,70,44,26,18,36,54,40,22,14,28,46,58,32,20,12,24,16,10,8,6,6];
+    var bars = hs.map(function (h, i) {
+      return { h: h, c: i < 30 ? '#F0A94B' : '#4A463F' };
+    });
+    return { bars: bars };
+  }
+}
+</script>
+</body>
+</html>

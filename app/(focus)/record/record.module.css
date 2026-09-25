@@ -1,0 +1,163 @@
+.statusPill {
+  height: 30px;
+  padding: 0 12px;
+  border-radius: 15px;
+  background: var(--raised);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--faint);
+}
+
+.spacer {
+  width: 44px;
+  height: 44px;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 0 24px;
+}
+
+.timerBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.timer {
+  font-family: var(--font-mono);
+  font-size: 64px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.hint {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--muted);
+}
+
+.wave {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.bar {
+  width: 4px;
+  height: 6px;
+  border-radius: 2px;
+  background: #4A463F;
+}
+
+.transcript {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+}
+
+.transcriptEmpty {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--faint);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 36px;
+  padding: 8px 24px 20px;
+}
+
+.control {
+  width: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.controlMain {
+  width: 96px;
+}
+
+.roundButton {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  border: 1px solid var(--line-strong);
+  background: #211F1C;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doneButton {
+  width: 84px;
+  height: 84px;
+  border: 0;
+  border-radius: 42px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 10px rgba(240, 169, 75, 0.12);
+}
+
+.roundButton:disabled,
+.doneButton:disabled {
+  opacity: 0.45;
+}
+
+.controlLabel {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.doneLabel {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.footnote {
+  margin: 0;
+  padding: 0 32px max(36px, env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}

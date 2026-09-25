@@ -1,0 +1,86 @@
+:root {
+  --bg: #131211;          /* app background */
+  --surface: #1C1A18;     /* cards */
+  --raised: #252320;      /* chips, inset boxes */
+  --nav: #161513;         /* bottom bar */
+  --line: #2A2724;        /* card borders, dividers */
+  --line-strong: #34312C; /* outline buttons, pills */
+  --attention: #1F1B15;   /* surface for "needs you" cards */
+
+  --text: #EFEBE3;
+  --text-2: #D9D4CA;
+  --muted: #A8A296;       /* captions: passes 4.5:1 on --surface */
+  --faint: #8C867B;       /* past or finished items only */
+
+  --accent: #F0A94B;      /* record, primary actions, anything needing you */
+  --accent-ink: #1A1307;  /* text on accent */
+  --accent-soft: rgba(240,169,75,0.14);
+
+  --task: #B9CF9B;  --draft: #9DBBEA;  --invoice: #F0C36A;  --expense: #CDB3EA;
+
+  /* next/font sets --nf-* on <html>; the named fallbacks keep the stacks readable. */
+  --font-display: var(--nf-serif), 'Instrument Serif', Georgia, serif; /* headings + Carl's voice (italic) */
+  --font-ui: var(--nf-geist), 'Geist', system-ui, sans-serif;
+  --font-mono: var(--nf-mono), 'Geist Mono', ui-monospace, monospace; /* times, durations, amounts */
+
+  --r-card: 16px; --r-row: 14px; --r-pill: 999px;
+
+  --content-max: 480px;
+  --nav-height: 82px; /* bar without the safe-area inset */
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
