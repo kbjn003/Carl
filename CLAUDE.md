@@ -13,6 +13,7 @@ Visual reference: `design/*.dc.html` (static mockups; copy the layout, copy text
 - Next.js App Router + TypeScript (strict). Plain CSS with the variables in PLAN.md §3, plus CSS Modules. No Tailwind, no UI kit.
 - SQLite via `better-sqlite3` at `data/carl.db`; migrations in `lib/db/migrations/*.sql`, applied on boot.
 - Anthropic via `@anthropic-ai/sdk`; the model comes from `CARL_MODEL`. Structured output **only** through tool use (`file_memo`).
+- Next.js 16 differs from older versions: see `AGENTS.md` and read `node_modules/next/dist/docs/` before using an API you're unsure of.
 - Keep dependencies few and boring. Ask before adding any package that isn't listed in PLAN.md §2.
 - `data/` and `.env` are gitignored.
 
@@ -31,6 +32,8 @@ Visual reference: `design/*.dc.html` (static mockups; copy the layout, copy text
 
 ## Commands (fill in as they exist)
 - `npm run dev`: dev server on :3000
+- `npm run build` then `npm start`: production build and server on :3000 (what the Mac Mini runs)
+- `npm run lint`: ESLint
 - `npm run seed`: reset demo data
 - `npm test`: Vitest
 - Phone testing over HTTPS: `tailscale serve --bg 3000`

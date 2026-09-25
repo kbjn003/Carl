@@ -1,0 +1,82 @@
+.nav {
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  max-width: var(--content-max);
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: end;
+  padding: 8px 6px max(26px, env(safe-area-inset-bottom));
+  border-top: 1px solid var(--line);
+  background: var(--nav);
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 48px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.tab[aria-current="page"] {
+  color: var(--accent);
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  left: calc(50% + 4px);
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.talk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: -36px;
+}
+
+.talkButton {
+  width: 66px;
+  height: 66px;
+  border-radius: 33px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 0 6px var(--nav),
+    0 0 0 7px var(--line),
+    0 8px 24px rgba(240, 169, 75, 0.25);
+}
+
+.talkButton:active {
+  transform: scale(0.96);
+}
+
+.talkLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+}
